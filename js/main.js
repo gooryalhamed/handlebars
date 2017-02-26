@@ -13,6 +13,12 @@ ourRequest.onerror = function(){
 	console.log("connection error");
 }
 ourRequest.send();
+
+Handlebars.registerHelper("calculatedAge", function(birthYear){
+	var age = new Date().getFullYear() - birthYear;
+	return age;
+});
+
 function createHTML(petsData){
 	var rowTemplate = document.getElementById("pets-template").innerHTML;
 	var compiledTemplate = Handlebars.compile(rowTemplate);
