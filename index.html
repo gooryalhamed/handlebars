@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>handlebars example</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="page-wrap">
+	<h1>handlebars Example</h1>
+	<div id="pets-container"></div>
+</div>
+
+<script type="text/x-handlebars-template" id="pets-template">
+	{{each pets}}
+		<h2>{{name}}</h2>
+	{{/each}}
+</script>
+<script src="js/handlebars-v4.0.5.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
